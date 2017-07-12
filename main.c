@@ -1323,7 +1323,7 @@ init_fds()
 			if (do_lint)
 				lintwarn(_("no pre-opened fd %d"), fd);
 #endif
-			newfd = devopen("/dev/null", opposite_mode[fd]);
+			newfd = devopen("null:", opposite_mode[fd]);
 			/* turn off some compiler warnings "set but not used" */
 			newfd += 0;
 #ifdef MAKE_A_HEROIC_EFFORT

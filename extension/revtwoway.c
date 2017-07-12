@@ -75,7 +75,7 @@ gawk_getdtablesize()
 	 * Set up a bitmap of 2048 elements.
 	 * Initialize it to zero.
 	 * In a loop, do
-	 * 	fd = open("/dev/null", O_RDONLY)
+	 * 	fd = open("null:", O_RDONLY)
 	 * 	set the bit corresponding to fd in the bit map
 	 * until it fails.
 	 * Get the highest value that succeeded and increment it by one

@@ -625,9 +625,9 @@ remap_std_file(int oldfd)
 	 * Give OS-specific routines in gawkmisc.c a chance to interpret
 	 * "/dev/null" as appropriate for their platforms.
 	 */
-	newfd = os_devopen("/dev/null", O_RDWR);
+	newfd = os_devopen("null:", O_RDWR);
 	if (newfd == INVALID_HANDLE)
-		newfd = open("/dev/null", O_RDWR);
+		newfd = open("null:", O_RDWR);
 	if (newfd >= 0) {
 		/* if oldfd is open, dup2() will close oldfd for us first. */
 		ret = dup2(newfd, oldfd);
