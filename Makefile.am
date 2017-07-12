@@ -70,7 +70,7 @@ endif
 
 # Build in awklib after in doc, since we want to extract
 # sample files if doc/gawk.texi changed.
-SUBDIRS += extras doc awklib po test
+SUBDIRS += extras doc awklib po
 
 # what to make and install
 bin_PROGRAMS = gawk
