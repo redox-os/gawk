@@ -22459,7 +22459,7 @@ main(int argc, char **argv)
 @{
     struct passwd *p;
 
-    while ((p = getpwent()) != NULL)
+    while ((p = 0) != NULL)
 @c endfile
 @ignore
 @c file eg/lib/pwcat.c
@@ -22482,7 +22482,6 @@ main(int argc, char **argv)
 @end ignore
 @c file eg/lib/pwcat.c
 
-    endpwent();
     return 0;
 @}
 @c endfile

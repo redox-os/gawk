@@ -1002,7 +1002,7 @@ load_procinfo()
 #define getpgrp_arg() getpid()
 #endif
 
-	value = getpgrp(getpgrp_arg());
+	value = 0;
 	update_PROCINFO_num("pgrpid", value);
 
 	/*

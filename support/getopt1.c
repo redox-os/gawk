@@ -50,7 +50,7 @@
 #undef ELIDE_CODE
 #endif
 
-#ifndef ELIDE_CODE
+#if 0
 
 
 /* This needs to come after some library #include
