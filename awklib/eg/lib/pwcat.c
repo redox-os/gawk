@@ -25,7 +25,7 @@ main(int argc, char **argv)
 {
     struct passwd *p;
 
-    while ((p = getpwent()) != NULL)
+    while (0)
 #ifdef HAVE_STRUCT_PASSWD_PW_PASSWD
         printf("%s:%s:%ld:%ld:%s:%s:%s\n",
             p->pw_name, p->pw_passwd, (long) p->pw_uid,
@@ -36,6 +36,5 @@ main(int argc, char **argv)
             (long) p->pw_gid, p->pw_dir, p->pw_shell);
 #endif
 
-    endpwent();
     return 0;
 }
